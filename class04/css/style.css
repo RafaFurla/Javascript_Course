@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: darksalmon
+}
+
+h1 {
+    color: chocolate;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12vw;
+    margin-left: 2vw;
+}
+
+p {
+    color: chocolate;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    margin: 6vw;
+    text-align: right;
+}
