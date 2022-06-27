@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Steps with DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Starting studies with DOM</h1>
+    <p>Here goes the result</p>
+    <p>Learning how to use <strong>DOM</strong> in JS</p>
+    <div id="msg">Click me</div>
+    <script>
+        var body = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[0];
+        var p2 = window.document.getElementsByTagName('p')[1];
+        window.document.write(`Was written this: ${p1.innerText}<br>`);
+        p1.style.color = 'Blue';
+        body.style.backgroundColor = 'black';
+        window.document.write(p2.innerHTML);
+        window.document.getElementById('msg').innerText = 'Waiting for your click...';
+        window.document.getElementById('msg').style.backgroundColor = 'green';
+    </script>
+</body>
+</html>
