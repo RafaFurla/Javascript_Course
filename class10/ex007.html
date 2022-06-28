@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding numbers</title>
+</head>
+<body>
+    <h1>Adding Numbers</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="add" onclick="add()">
+    <div id="res">
+        Resultado
+    </div>
+    <script>
+        function add() {
+            var n1 = Number(window.document.getElementById('txtn1').value);
+            var n2 = Number(window.document.getElementById('txtn2').value);
+            var res = window.document.getElementById('res');
+            var s = n1 + n2;
+            res.innerHTML = `The sum between ${n1} and ${n2} is equal to <strong>${s}</strong>`;
+        }
+        
+    </script>
+</body>
+</html>
