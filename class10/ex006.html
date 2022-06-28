@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 id="message">Test</h1>
+    <div id="area" onclick="clicker()" onmouseenter="enter()" onmouseout="left()">
+        <p>Interact...</p>
+    </div>
+    <script>
+        /* two ways of doing the same thing. The first one is to put events direct in HTML with the parameters initiated by "on". The second one is to put the functionality "Listener" direct in Javascript */
+// first way
+        var a = window.document.getElementById('area'); // global scope. If I had created this inside any function it would have a local scope. 
+        function clicker(){
+            a.innerText = 'Clicked';
+            a.style.backgroundColor = "red";
+        }
+        function enter(){
+            a.innerText = "Entered";
+        }
+        function left(){
+            a.innerText = "It went out.";
+            a.style.backgroundColor = "rgb(1, 92, 57)";
+        }
+// second way
+        var b = window.document.getElementById("message");
+        b.addEventListener('mouseenter', over);
+        b.addEventListener('mouseout', leave);
+        function over(){
+            b.style.backgroundColor = "blue";
+            b.style.color = "white";
+        }
+        function leave(){
+            b.style.backgroundColor = "white";
+            b.style.color = "black";
+        }
+
+
+    </script>
+</body>
+</html>
