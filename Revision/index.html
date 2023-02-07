@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Software...</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Hello<br>World!</h1>
+    <p><script>
+        var name = String(window.prompt('What is your name?'));
+        window.confirm(`Welcome ${name}`);
+        var number1 = Number.parseInt(window.prompt('Type an integer number'));
+        var number2 = Number.parseInt(window.prompt('Type other integer number'));
+        var sum = number1 + number2
+        document.write("The sum between " + number1 + " and " + number2 + " is equal to: " + sum);
+        document.write("The division between " + sum + " and the number " + number1 + " is: " + (Number(sum)/Number.parseFloat(number1)).toFixed(2));
+        document.write(`The number of letters in your name is ${name.length}`);
+        document.write(`Your name in upper cases is: ${name.toUpperCase()}`);
+        document.write(`Your name in lower cases is: ${name.toLowerCase()}`);
+    </script></p>
+</body>
+</html>
