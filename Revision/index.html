@@ -9,6 +9,8 @@
 </head>
 <body>
     <h1>Hello<br>World!</h1>
+    <h2><strong>Test</strong></h2>
+    <h2 id="hello">Welcome</h2>
     <p><script>
         var name = String(window.prompt('What is your name?'));
         window.confirm(`Welcome ${name}`);
@@ -22,6 +24,23 @@
         document.write(`Your name in lower cases is: ${name.toLowerCase()}`);
         var number3 = Number(3.57).toLocaleString('USD', {style: 'currency', currency: 'USD'});
         document.write(`test: ${number3}`);
+        var h2 = window.document.getElementsByTagName('h2')[0];
+        window.document.write(`In h2 we have the following text: ${h2.innerText}`);
+        window.document.write(`In h2 we have the following text: ${h2.innerHTML}`);
+        h2.style.color = 'red';
+        var body = window.document.body;
+        body.style.backgroundColor = 'black';
+        var welcome = window.document.getElementById('hello');
+        welcome.addEventListener('mouseenter', over);
+        welcome.addEventListener('mouseout', leave);
+        function over() {
+            welcome.style.backgroundColor = 'white';
+        }
+        function leave() {
+            welcome.style.backgroundColor = 'black';
+        }
+
+
     </script></p>
 </body>
 </html>
