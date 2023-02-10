@@ -8,6 +8,24 @@
 </head>
 <body>
     <h1>Fines System</h1>
-    
+    Car Speed: <input type="number" id="speeding"> Km/h
+    <input type="button" value="Verify" onclick="Calculate()">
+    <div id="Result">
+
+    </div>
+    <script>
+        function Calculate() {
+            var speed = window.document.getElementById("speeding");
+            var result = window.document.getElementById("Result");
+            var velocity = Number(speed.value);
+            result.innerHTML = `<p>Your speed: (<strong>${velocity}km/h</strong>) is OK!</p>`;
+            result.innerHTML += `<p>You can continue your trip!</p>`;
+            if (velocity > 60) {
+                result.innerHTML = `<p>Your speed: (<strong>${velocity}km/h</strong>) transpasse the limit speed of 60km/h! You are fined!</p>`
+            } else {
+                
+            };
+        }
+    </script>
 </body>
 </html>
