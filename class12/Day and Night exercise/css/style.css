@@ -1,0 +1,48 @@
+/* ---------------------- Pre definitions ---------------------- */
+:root {
+    --day: #c9c351;
+    --afternoon:#EB7C92;
+    --night: #00719E;
+    --fontmain: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ---------------------- Space for the content ---------------------- */
+
+body {
+    background-color: var(--day);
+    width: 70vw;
+    height: 100vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 3px 3px 6px rgba(0, 0, 0, 0.15);
+    font-family: var(--fontmain);
+}
+
+h1 {
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}

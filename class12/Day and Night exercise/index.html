@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <title>Day Hour</title>
+</head>
+<body>
+    <h1>Day Hour</h1>
+    <section>
+        <p id="timeinfo"></p>
+        <div id="image">
+        </div>
+    </section>
+    <footer>@CursoemVideo</footer>
+    <script>
+        var date = new Date();
+        var hour = date.getHours();
+        var p = window.document.getElementById('timeinfo');
+        p.innerHTML = `Now is: ${hour}`;
+        var image = window.document.getElementById('image');
+        if (hour > 00 && hour <= 12) {
+            image.innerHTML = '<img src="images/Day.png" alt="Image of a Sunny day">';
+        }
+        else if (hour > 12 && hour <= 17) {
+            image.innerHTML = '<img src="images/Afternoon.png" alt="Image of the afternoon">';
+        }
+        else {
+            image.innerHTML = '<img src="images/Night.png" alt="Image of the Night">';
+        }
+    </script>
+</body>
+</html>
