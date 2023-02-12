@@ -1,8 +1,6 @@
 /* ---------------------- Pre definitions ---------------------- */
 :root {
-    --day: #c9c351;
-    --afternoon:#ebb57c;
-    --night: #023e56;
+    --maincolor: #0686b9;
     --fontmain: 'Roboto', sans-serif;
 }
 
@@ -14,7 +12,7 @@
 /* ---------------------- Space for the content ---------------------- */
 
 body {
-    background-color: var(--day);
+    background-color: var(--maincolor);
     width: 70vw;
     height: 100vh;
     position: relative;
@@ -40,20 +38,24 @@ section {
     height: fit-content;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    text-align: center;
 }
 
 p {
     padding: 5px;
-    text-align: center;
 }
 
 footer {
+    color: white;
     margin-top: 20px;
     text-align: center;
 }
 div {
     margin-top: 15px;
     text-align: center;
+}
+
+#button {
 }
 
 /*---------------------------------------------------------------------------*/

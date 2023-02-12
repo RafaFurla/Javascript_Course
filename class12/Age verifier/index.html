@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <title>Age Verifier</title>
+</head>
+<body>
+    <h1>Age Verifier</h1>
+    <section>
+        <div>Birthday: <input id="birthday" type="date"></div>
+        <div id="sex">Sex: <input type="radio" name="sex"> Male <input type="radio" name="sex"> Female</div>
+        <input id="button" type="button" value="Verify" onclick="webchange()">
+        <p id="result">Insert the required data to see the results!</p>
+        <div id="image"></div>
+    </section>
+    <footer>@CursoemVideo</footer>
+    <script>
+        // getting system date:
+        var date = new Date();
+        var system_date = date.getFullYear();
+        // getting input informations:
+        var input_date = window.document.getElementById('birthday');
+        var inputed_date = input_date.getFullYear();
+        var input_sex = window.document.getElementsByName('sex');
+        var p = window.document.getElementById('result');
+        // changing website according to system hours. 
+        function webchange() {
+            var image = window.document.getElementById('image');
+            var dif = system_date - inputed_date;
+            if (dif < 0) {
+                window.alert('You put an invalid date');
+            }
+            else {
+                if (dif < 60) {
+                    if (input_sex == 'male') {
+                        image.innerHTML = '<img src="images/young-man.png" alt="Image of a young man">';
+                        p.innerHTML = `Man ${dif} years.`; 
+                    }
+                    else {
+                        image.innerHTML = '<img src="images/young-woman.png" alt="Image of a young woman">';
+                        p.innerHTML = `Woman ${dif} years.`;
+                    }
+                }
+                else  {
+                    if (input_sex == 'male') {
+                        image.innerHTML = '<img src="images/old-man.png" alt="Image of an old man">';
+                        p.innerHTML = `Man ${dif} years.`;
+                    }
+                    else {
+                        image.innerHTML = '<img src="images/old-woman.png" alt="Image of an old woman">';
+                        p.innerHTML = `Woman ${dif} years.`;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
