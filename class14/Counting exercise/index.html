@@ -8,13 +8,20 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
-    <title>Tittle</title>
+    <title>Let's Count</title>
 </head>
 <body>
-    <h1>Tittle</h1>
+    <h1>Let's Count</h1>
     <section>
-        <div id="timeinfo"></div>
-        <div id="image">
+        <div>
+            <label for="start">Start: </label><input type="number" id="start"><br>
+            <label for="end">End: </label><input type="number" id="end"><br>
+            <label for="step">Step: </label><input type="number" id="step"><br>
+            <input type="button" type="button" value="count" onclick="counting()">
+        </div>
+        <div>
+            <p id="action">Preparing the counting...</p>
+            <p id="result"></p>
         </div>
     </section>
     <footer>&copy; @CursoemVideo</footer>
