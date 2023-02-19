@@ -1,0 +1,81 @@
+/* ---------------------- Pre definitions ---------------------- */
+:root {
+    --maincolor: #0686b9;
+    --fontmain: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ---------------------- Space for the content ---------------------- */
+
+body {
+    background-color: var(--maincolor);
+    width: 70vw;
+    height: 100vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--fontmain);
+}
+
+h1 {
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 740px;
+    height: fit-content;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+}
+
+select {
+    width: 150px;
+}
+
+p {
+    padding: 5px;
+}
+
+footer {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+div {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/*---------------------------------------------------------------------------*/
+
+@media screen and (min-width: 742px) and (max-width: 1056px) {
+    body {
+        width: 740px;
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 742px) {
+    body {
+        width: 100vw;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+
+    section {
+        width: 100vw;
+    }
+}
